@@ -1,0 +1,20 @@
+{
+    "name": "deadfish-stage",
+    "version": "1.0.7",
+    "description": "",
+    "main": "index.js",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/SteveWooo/deadfish-stage.git"
+    },
+    "author": "stevewooo",
+    "license": "Apache-2.0",
+    "bugs": {
+        "url": "https://github.com/SteveWooo/deadfish-stage/issues"
+    },
+    "homepage": "https://github.com/SteveWooo/deadfish-stage#readme",
+    "bin": {
+        "deadfish-stage": "index.js"
+    }
+}
+  
