@@ -23,6 +23,10 @@ const moduleRule = {
     }, {
         test: /\.jsx?$/,
         use: "babel-loader",
+    }, {
+        test: /\.tsx?$/,
+        use: 'ts-loader',
+        exclude: /node_modules/,
     }]
 }
 
@@ -32,6 +36,9 @@ module.exports={
     output: {
         filename: "bundle.js",
         path: `${__dirname}/dist`
+    },
+    resolve: {
+        extensions: ['.tsx', '.ts', '.js'],
     },
     module: moduleRule,
     plugins: [htmlPlugin]
