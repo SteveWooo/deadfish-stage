@@ -35,11 +35,16 @@ module.exports={
     entry: "./src/index.js",
     output: {
         filename: "bundle.js",
-        path: `${__dirname}/dist`
+        path: `${__dirname}/dist`,
+        publicPath: '/'
     },
     resolve: {
         extensions: ['.tsx', '.ts', '.js'],
     },
+    devServer: {
+        historyApiFallback: true
+	},
     module: moduleRule,
-    plugins: [htmlPlugin]
+    plugins: [htmlPlugin],
+    mode: 'production',
 }
