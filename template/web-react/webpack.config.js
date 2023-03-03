@@ -32,9 +32,10 @@ const moduleRule = {
 
 module.exports={
     mode: "development",
+    mode: "production",
     entry: "./src/index.js",
     output: {
-        filename: "bundle.js",
+        filename: "bundle.[hash].js",
         path: `${__dirname}/dist`,
         publicPath: '/'
     },
@@ -46,5 +47,4 @@ module.exports={
 	},
     module: moduleRule,
     plugins: [htmlPlugin],
-    mode: 'production',
 }
