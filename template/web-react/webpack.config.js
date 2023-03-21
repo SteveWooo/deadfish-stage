@@ -43,7 +43,8 @@ module.exports={
         extensions: ['.tsx', '.ts', '.js'],
     },
     devServer: {
-        historyApiFallback: true
+        historyApiFallback: true,
+        static: `${__dirname}/src`
 	},
     module: moduleRule,
     plugins: [htmlPlugin],

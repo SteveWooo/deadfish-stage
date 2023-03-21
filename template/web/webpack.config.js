@@ -32,5 +32,8 @@ module.exports={
         path: `${__dirname}/dist`
     },
     module: moduleRule,
-    plugins: [htmlPlugin]
+    plugins: [htmlPlugin],
+    devServer: {
+        static: `${__dirname}/src`
+	},
 }
