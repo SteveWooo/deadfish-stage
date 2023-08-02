@@ -30,14 +30,16 @@ const moduleRule = {
     }]
 }
 
+const mode = "production"; // development
+
 module.exports={
-    mode: "development",
-    mode: "production",
+    mode: mode,
+    
     entry: "./src/index.js",
     output: {
         filename: "bundle.[hash].js",
         path: `${__dirname}/dist`,
-        publicPath: './'
+        publicPath: mode === 'production' ? './' : '/'
     },
     resolve: {
         extensions: ['.tsx', '.ts', '.js'],
