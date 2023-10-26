@@ -30,8 +30,9 @@ const moduleRule = {
     }]
 }
 
-const mode = "production";
+// const mode = "production";
 // const mode = "development";
+const mode = process.env.NODE_ENV
 
 module.exports={
     mode: mode,
