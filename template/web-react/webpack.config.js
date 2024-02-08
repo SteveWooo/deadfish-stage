@@ -1,4 +1,5 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const fs = require('fs')
 
 // ========== 插件 =========
 const htmlPlugin = new HtmlWebpackPlugin({
@@ -33,6 +34,15 @@ const moduleRule = {
 // const mode = "production";
 // const mode = "development";
 const mode = process.env.NODE_ENV
+
+const outputPath = `${__dirname}/dist`
+// 复制资源目录到目标目录
+const sourceResPath = `${__dirname}/src/res`
+const targetResPath = `${outputPath}/res`
+const images = fs.readdirSync(sourceResPath)
+for(let i = 0; i < images.length; i++) {
+    fs.copyFileSync(`${sourceResPath}/${images[i]}`, `${targetResPath}/${images[i]}`)
+}
 
 module.exports={
     mode: mode,
